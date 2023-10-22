@@ -1,3 +1,188 @@
 /* 
     General Styles used on every website (Don't Repeat Yourself)
 */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+
+body {
+    font: 78.5% Comfortaa, Freesans, sans-serif;
+    background: #2c3338;
+}
+span.toggle-password {
+    color: grey;
+    margin-left: -36px;
+}
+
+.login-wrapper{
+    margin:80px auto;
+    width:325px;
+}
+
+form h1{
+    color:#dedede;
+    font-size:2.8em;
+    font-weight: normal;
+    letter-spacing: -1px;
+    font-family: Roboto;
+}
+
+form h1 span{
+    font-weight: 500;
+    letter-spacing: -1px;
+    
+}
+
+form input{
+    border:none;
+    margin:0;
+}
+
+form .input-row{
+    margin:2em 0;
+    overflow:hidden;
+}
+
+form .icon{
+    font-size:1.4em;
+    background:#FFFFFF;
+    padding:0.8em;
+    border-left:4px solid #ea4c88;
+    color:#9f9f9f;
+    float:left;
+}
+
+form input[type="text"], form input[type="password"] {
+    padding: 1em 0.8em 1em 0;
+    font-size: 15px;
+    color: #757575;
+    width: 275px;
+}
+
+form input[type="text"]:focus,form input[type="password"]:focus {
+    outline:0;
+}
+
+form input[type="submit"]{
+    border:none;
+    background:#ea4c88;
+    color:#FFFFFF;
+    font-size:1.6em;
+    padding:0.7em 1.2em;
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+form input[type="submit"]:hover {
+    background:#c62a65;
+    opacity: 0.8;
+}
+
+form .reset {
+    /* margin-left: 1em; */
+    color: #FFFFFF;
+    font-size: 1.4em;
+}
+
+form .reset a{
+    color:#FFFFFF;
+    text-decoration: none;
+}
+
+form .reset a:hover{
+    text-decoration: none;
+    color:#c62a65;
+}
+
+.submit-row {
+    font-size: 9px;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.text-center {
+    color: white;
+    font-size: 15px;
+    text-align: center!important;
+}
+
+.h-100 {
+    height: 90%!important;
+}
+
+footer.footer.mt-auto.py-3.text-center {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    margin-bottom: 20px;
+}
+
+
+.alert-danger {
+    border-radius: 0px;
+    width: 100%;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #ea4c88;
+    border-color: #2c3338;
+}
+
+
+.submit-row.d-flex{
+    justify-content: space-between;
+    align-items: center;
+    font-size: 9px;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+
+i.fa.fa-lock {
+    padding-right: 2px;
+}
+
+a:hover {
+    font-size: 10px;
+    padding: 0.7em 0em;
+    color: #ea4c88;
+
+}
+
+a {
+    font-size: 10px;
+    padding: 0.7em 0em;
+    color: #c0c0c0;
+}
+
+img.error, img.hola {
+    margin: 0 auto;
+    display: block;
+    width: 35%;
+}
+
+img.hola {
+    margin: 0 auto;
+    display: block;
+    width: 35%;
+}
+
+
+h1 {
+    font-size: 1.5rem;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #ea4c88;
+    border-color: #ea4c88;
+}
+
+.btn-danger:hover {
+    color: #fff;
+    background-color: #c62a65;
+    border-color: #c62a65;
+}

@@ -1,0 +1,35 @@
+
+
+.submit-row.d-flex{
+    justify-content: space-between;
+    align-items: center;
+    font-size: 9px;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+
+i.fa.fa-lock {
+    padding-right: 2px;
+}
+
+a:hover {
+    font-size: 10px;
+    padding: 0.7em 0em;
+    color: #ea4c88;
+
+}
+
+a {
+    font-size: 10px;
+    padding: 0.7em 0em;
+    color: #c0c0c0;
+}
+
+input#registro{
+    border-right: 5px solid #ea4c88;
+}
+
+
+span#raya {
+    border-left: 4px solid #ffffff;
+}

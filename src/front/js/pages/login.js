@@ -4,11 +4,11 @@ import "../../styles/home.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-export const Home = () => {
+export const Login = () => {
   const { store, actions } = useContext(Context);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false); // Estado para mostrar/ocultar contraseña
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
@@ -23,13 +23,13 @@ export const Home = () => {
     try {
       // Llamada a la función que verifica el usuario en la base de datos
       await actions.loginUsuario(email, password);
-  
+
       // Redirige al área privada inmediatamente después de la autenticación exitosa
       actions.areaPrivadaUsuario(email, password);
-  
+
       // Redirige a la ruta '/private'
       navigate("/private");
-  
+
     } catch (error) {
       // Manejo de errores, muestra un mensaje de error si el usuario no está registrado
       setError("Usuario no registrado");
@@ -63,8 +63,7 @@ export const Home = () => {
           />
         </div>
 
-
-        <div className="input-row">
+        <div className="input-row d-flex">
           <span className="icon"><i className="fa fa-lock"></i></span>
           <input
             type={showPassword ? "text" : "password"}
@@ -79,10 +78,10 @@ export const Home = () => {
         </div>
 
         <div className="submit-row d-flex">
-          <input type="submit" value="Inicia sesión" />
+          <input type="submit" value="Inicio de sesión" />
 
           <Link to="/registrar">
-            <span className="reset">&nbsp; Regístrate &nbsp;</span>
+            <span className="reset"> or &nbsp; Regístrate</span>
           </Link>
         </div>
       </form>
@@ -90,4 +89,4 @@ export const Home = () => {
   );
 };
 
-export default Home;
+export default Login;
