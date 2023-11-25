@@ -32,7 +32,7 @@ export const Home = () => {
   
     } catch (error) {
       // Manejo de errores, muestra un mensaje de error si el usuario no está registrado
-      setError("Usuario no registrado");
+      setError(`Error al iniciar sesión: ${error.message || error}`);
       console.error("Error al iniciar sesión", error);
     }
   };

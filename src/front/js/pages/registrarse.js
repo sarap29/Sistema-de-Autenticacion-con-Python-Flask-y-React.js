@@ -12,6 +12,7 @@ export const Registrar = () => {
     password: "",
   });
   const [error, setError] = useState("");
+  const [successMessage, setSuccessMessage] = useState(""); // Nueva línea
   const [showPassword, setShowPassword] = useState(false);
 
   const enviarFormulario = async (event) => {
@@ -24,7 +25,10 @@ export const Registrar = () => {
 
     try {
       await actions.registrarUsuario(contact);
-      // Registro exitoso, podrías redirigir si es necesario
+      setSuccessMessage("Usuario creado, por favor inicia sesión.");
+      setTimeout(() => {
+        setSuccessMessage("");
+      }, 5000);
       // navigate("/");
     } catch (error) {
       setError(`El usuario ${contact.email} ya existe. Por favor inicia sesión.`);
@@ -44,13 +48,18 @@ export const Registrar = () => {
           </div>
         )}
 
+        {successMessage && ( // Nueva línea
+          <div className="alert alert-danger">
+            {successMessage}
+          </div>
+        )}
+
         <div className="input-row">
           <span className="icon" id="raya">
             <i className="fa fa-at"></i>
           </span>
           <input
             type="text"
-            id="registro"
             placeholder="Email"
             value={contact.email}
             onChange={(e) => setContact({ ...contact, email: e.target.value })}
@@ -63,7 +72,6 @@ export const Registrar = () => {
           </span>
           <input
             type={showPassword ? "text" : "password"}
-            id="registro"
             placeholder="Password"
             value={contact.password}
             onChange={(e) => setContact({ ...contact, password: e.target.value })}
